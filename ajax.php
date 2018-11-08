@@ -2,8 +2,6 @@
 
   if($_SERVER['SERVER_NAME'] == 'localhost') {
     $conn = mysqli_connect('localhost','root','','torcsillneo_helicldb');
-  }else{
-    $conn = mysqli_connect('localhost','torcsillneo_helicusr','yL47WLv9','torcsillneo_helicldb');
   }
 
   if (mysqli_connect_errno())

@@ -21,7 +21,6 @@
   $datasql = "SELECT * FROM `engineering_projects` LIMIT $limit OFFSET $offSet";
   $res = mysqli_query($conn,$datasql);
   $resultArr = array();
-  // $counter = 0;
 
   while($row = mysqli_fetch_assoc($res)) {
    	$data = array(
@@ -34,7 +33,7 @@
    	);
     array_push($resultArr,$data);
   }
-  // $count = count($resultArr);
+
   $result=array('draw'=>$draw ,'recordsTotal'=>$total, 'recordsFiltered'=>$total, 'data'=>$resultArr);
   echo json_encode($result); die;
 ?>
